@@ -1,25 +1,10 @@
-# Projeto
- 
-## Sumário
-* [Desenvolvimento, por onde começar](#desenvolvimento-por-onde-começar)
-* [Dependências](#dependências)
-* [Bases de dados](#bases-de-dados)
-* [Builds e testes](#builds-e-testes)
-* [CI/CD](#ci/cd)
-* [Deploy](#deploy)
-* [Contribuição](#contribuição)
- 
-## Desenvolvimento, por onde começar
- 
-## Dependências
- 
-## Bases de dados
- 
-## Build e Testes
- 
-## CI/CD
- 
-## Deploy 
- 
-## Contribuição
-Se deseja contribuir saiba mais sobre a formatação do arquivo README, veja em [Guia de Sintax](https://docs.microsoft.com/en-us/vsts/project/wiki/markdown-guidance?view=vsts)
+# route-processing
+Ajuda usuários a encontrar o melhor trajeto entre a origem até o destino
+
+### **Docker**
+
+1. Executar comando na **raiz** do projeto:
+
+> *docker-compose up -d*
+2. Após rodar o comando acima, execute o request em algum browser:
+ > *http://localhost:5000/api/route/origin/{origin}/destination/{destination}*
