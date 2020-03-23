@@ -13,18 +13,16 @@ namespace RoteProcessing.Infra.Services
     {
         private readonly HttpClient _httpClient;
         private readonly IDomainNotification _domainNotification;
-        public readonly IConfiguration _configuration;
 
         public DirectionService(HttpClient httpClient, IDomainNotification domainNotification, IConfiguration configuration)
         {
             _httpClient = httpClient;
             _domainNotification = domainNotification;
-            _configuration = configuration;
         }
 
         public async Task<Directions> GetAsync(string origin, string destination)
         {
-            var response = await _httpClient.GetAsync($"json?origin={origin}&destination={destination}&key={_configuration["API:DirectionsKey"]}");
+            var response = await _httpClient.GetAsync($"json?origin={origin}&destination={destination}&key=AIzaSyAyq8C_C4xcgdHkxo-0KdovF5X0yVnKtz4");
             var stringResponse = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)
