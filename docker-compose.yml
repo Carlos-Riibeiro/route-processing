@@ -1,0 +1,15 @@
+version: '3.4'
+services:
+  api:
+    container_name: roteprocessingapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - rote-processing-network
+    ports:
+      - 5000:80
+
+networks: 
+  rote-processing-network:
+      driver: bridge
