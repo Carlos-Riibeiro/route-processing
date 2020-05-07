@@ -22,7 +22,7 @@ namespace RoteProcessing.Infra.Services
 
         public async Task<Directions> GetAsync(string origin, string destination)
         {
-            var response = await _httpClient.GetAsync($"json?origin={origin}&destination={destination}&key=AIzaSyAyq8C_C4xcgdHkxo-0KdovF5X0yVnKtz4");
+            var response = await _httpClient.GetAsync($"json?origin={origin}&destination={destination}&key={keygoogle}");
             var stringResponse = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)
